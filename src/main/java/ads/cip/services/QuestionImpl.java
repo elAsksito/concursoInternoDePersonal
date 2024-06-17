@@ -5,6 +5,7 @@ import ads.cip.exception.NotFoundException;
 import ads.cip.interfaces.IQuestion;
 import ads.cip.model.QuestionModel;
 import ads.cip.repository.QuestionRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,6 +18,7 @@ public class QuestionImpl implements IQuestion {
     private final QuestionRepository questionRepository;
     private static final String message = "Question not found";
 
+    @Autowired
     public QuestionImpl(QuestionRepository questionRepository) {
         this.questionRepository = questionRepository;
     }

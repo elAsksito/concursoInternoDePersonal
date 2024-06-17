@@ -6,6 +6,7 @@ import ads.cip.interfaces.IUserCertification;
 import ads.cip.model.UserCertificationId;
 import ads.cip.model.UserCertificationModel;
 import ads.cip.repository.UserCertificationRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -18,6 +19,7 @@ public class UserCertificationImpl implements IUserCertification {
     private final UserCertificationRepository userCertificationRepository;
     private static final String message = "User Certification not found";
 
+    @Autowired
     public UserCertificationImpl(UserCertificationRepository userCertificationRepository) {
         this.userCertificationRepository = userCertificationRepository;
     }

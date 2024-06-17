@@ -5,6 +5,7 @@ import ads.cip.exception.NotFoundException;
 import ads.cip.interfaces.IGrade;
 import ads.cip.model.GradeModel;
 import ads.cip.repository.GradeRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,6 +18,7 @@ public class GradeImpl implements IGrade {
     private final GradeRepository gradeRepository;
     private static final String message = "Grade not found";
 
+    @Autowired
     public GradeImpl(GradeRepository gradeRepository) {
         this.gradeRepository = gradeRepository;
     }

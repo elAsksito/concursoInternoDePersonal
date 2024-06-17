@@ -5,6 +5,7 @@ import ads.cip.exception.NotFoundException;
 import ads.cip.interfaces.IUser;
 import ads.cip.model.UserModel;
 import ads.cip.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -18,6 +19,7 @@ public class UserImpl implements IUser {
     private final UserRepository userRepository;
     private static final String message = "User not found with id: ";
 
+    @Autowired
     public UserImpl(UserRepository userRepository) {
         this.userRepository = userRepository;
     }

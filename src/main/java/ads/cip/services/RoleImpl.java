@@ -5,6 +5,7 @@ import ads.cip.exception.NotFoundException;
 import ads.cip.interfaces.IRole;
 import ads.cip.model.RoleModel;
 import ads.cip.repository.RoleRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,6 +18,7 @@ public class RoleImpl implements IRole {
     private final RoleRepository roleRepository;
     private static final String message = "Role not found";
 
+    @Autowired
     public RoleImpl(RoleRepository roleRepository) {
         this.roleRepository = roleRepository;
     }

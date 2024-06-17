@@ -5,6 +5,7 @@ import ads.cip.exception.NotFoundException;
 import ads.cip.interfaces.ICertification;
 import ads.cip.model.CertificationModel;
 import ads.cip.repository.CertificationRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,6 +18,7 @@ public class CertificationImpl implements ICertification {
     private final CertificationRepository certificationRepository;
     private static final String message = "Certification not found with id: ";
 
+    @Autowired
     public CertificationImpl(CertificationRepository certificationRepository) {
         this.certificationRepository = certificationRepository;
     }

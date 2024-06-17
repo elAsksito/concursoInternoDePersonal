@@ -5,6 +5,7 @@ import ads.cip.exception.NotFoundException;
 import ads.cip.interfaces.IPosition;
 import ads.cip.model.PositionModel;
 import ads.cip.repository.PositionRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,6 +18,7 @@ public class PositionImpl implements IPosition {
     private final PositionRepository positionRepository;
     private static final String message = "Position not found";
 
+    @Autowired
     public PositionImpl(PositionRepository positionRepository) {
         this.positionRepository = positionRepository;
     }

@@ -5,6 +5,7 @@ import ads.cip.exception.NotFoundException;
 import ads.cip.interfaces.IExam;
 import ads.cip.model.ExamModel;
 import ads.cip.repository.ExamRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,6 +18,7 @@ public class ExamImpl implements IExam {
     private final  ExamRepository examRepo;
     private static final String message = "Exam not found with id: ";
 
+    @Autowired
     public ExamImpl(ExamRepository examRepo) {
         this.examRepo = examRepo;
     }
